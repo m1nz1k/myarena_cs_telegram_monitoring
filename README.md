@@ -77,7 +77,7 @@ DATABASE=gino</pre>
 <p>В папке data находится файл config.py, в котором есть список admins. Укажите user_id вашего аккаунта Telegram в этом списке.</p>
 
 <h2>Лицензия</h2>
-<p>Этот проект лицензируется в соответствии с лицензией <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+<p>Этот проект лицензируется в соответствии с лицензией <a href="https://github.com/m1nz1k/myarena_cs_telegram_monitoring/blob/main/LICENSE">MIT</a>.</p>
 
 <h2>Автор</h2>
 <p>Автор: Евгений a.k.a EvilLolaBunny a.k.a M1nz1k<br>
