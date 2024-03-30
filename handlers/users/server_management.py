@@ -19,7 +19,7 @@ from aiogram.types import ParseMode
 
 
 
-@dp.callback_query_handler(text_contains='server_monitoring_')
+@dp.callback_query_handler(text_contains='server_monitoring')
 async def server_check(callback_query: types.CallbackQuery):
 
     await callback_query.message.edit_text('Выполняю запрос.📨 Пожалуйста, подождите! ⏳',
@@ -45,7 +45,7 @@ reply_markup=server_menu)
                                                reply_markup=server_menu)
         
 
-@dp.callback_query_handler(text_contains='server_change_map_')
+@dp.callback_query_handler(text_contains='server_change_map')
 async def map_change_callback(callback_query: types.CallbackQuery):
     await callback_query.message.edit_text('Выполняю запрос.📨 Пожалуйста, подождите! ⏳',
                                            reply_markup=server_menu)
@@ -70,7 +70,7 @@ async def handle_map_selection(callback_query: types.CallbackQuery):
     await callback_query.message.edit_text(f'✅Карта {map_name} успешно изменена!', 
                                            reply_markup=server_menu)
 
-@dp.callback_query_handler(text_contains='server_start_')
+@dp.callback_query_handler(text_contains='server_start')
 async def server_start(callback_query: types.CallbackQuery):
     await callback_query.message.edit_text('Выполняю запрос.📨 Пожалуйста, подождите! ⏳',
                                            reply_markup=server_menu)
@@ -83,7 +83,7 @@ async def server_start(callback_query: types.CallbackQuery):
         await callback_query.message.edit_text('❌Запрос не прошел.', 
                                                reply_markup=server_menu)
 
-@dp.callback_query_handler(text_contains='server_stop_')
+@dp.callback_query_handler(text_contains='server_stop')
 async def server_stop(callback_query: types.CallbackQuery):
     await callback_query.message.edit_text('Выполняю запрос.📨 Пожалуйста, подождите! ⏳',
                                            reply_markup=server_menu)
@@ -96,7 +96,7 @@ async def server_stop(callback_query: types.CallbackQuery):
                                                reply_markup=server_menu)
 
 
-@dp.callback_query_handler(text_contains='server_restart_')
+@dp.callback_query_handler(text_contains='server_restart')
 async def server_restart(callback_query: types.CallbackQuery):
     await callback_query.message.edit_text('Выполняю запрос.📨 Пожалуйста, подождите! ⏳',
                                            reply_markup=server_menu)
@@ -109,7 +109,7 @@ async def server_restart(callback_query: types.CallbackQuery):
                                                reply_markup=server_menu)
 
 
-@dp.callback_query_handler(text_contains='server_send_console_')
+@dp.callback_query_handler(text_contains='server_send_console')
 async def server_send(callback_query: types.CallbackQuery, state: FSMContext):
     original_message = await callback_query.message.edit_text('Введите команду:', 
                                                               reply_markup=server_menu)
